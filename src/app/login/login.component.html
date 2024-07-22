@@ -1,0 +1,23 @@
+<p>login works!</p>
+<form [formGroup]="loginform" (ngSubmit)="handleClick()">
+    <div>
+        <label class="form-label">Username</label>
+        <input formControlName="username" type="text" class="form-control">
+        <div *ngIf="loginform.controls['password'].touched || loginform.controls['password'].dirty">
+        <div class="alert alert-danger" *ngIf="loginform.controls['username'].errors?.['required']">Username is required</div>
+    </div>
+
+    </div>
+    <div>
+        <label class="form-label">Password</label>
+        <input formControlName="password" type="text" class="form-control">
+        <div  *ngIf="loginform.controls['password'].touched || loginform.controls['password'].dirty">
+            <div class="alert alert-danger" *ngIf="loginform.controls['password'].errors?.['required']">Password required</div>
+        </div>
+        
+    </div>
+    <div>
+        <button class="btn btn-primary">Login</button>
+    </div>
+
+</form>

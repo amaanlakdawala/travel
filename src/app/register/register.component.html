@@ -1,0 +1,50 @@
+<p>register works!</p>
+<form [formGroup]="registrationform" (ngSubmit)="handleClick()">
+
+    <div>
+        <label class="form-label">Username</label>
+        <input formControlName="username" class="form-control" type="text">
+        <div *ngIf="registrationform.controls['username'].dirty || registrationform.controls['username'].touched">
+
+            <div class="alert alert-danger" *ngIf="registrationform.controls['username'].errors?.['required']">
+                Username is required</div>
+
+
+
+        </div>
+        
+    </div>
+
+    <div>
+        <label class="form-label">Password</label>
+        <input formControlName="password" class="form-control" type="text">
+        <div *ngIf="registrationform.controls['password'].dirty || registrationform.controls['password'].touched">
+
+            <div class="alert alert-danger" *ngIf="registrationform.controls['password'].errors?.['required']">
+                Password is required</div>
+            <div class="alert alert-danger" *ngIf="registrationform.controls['password'].errors?.['maxlength']">
+                    Max length should be 10</div>
+
+        </div>
+        
+    </div>
+
+    <div>
+        <label class="form-label">Confirm Password</label>
+        <input formControlName="confirm_password" class="form-control" type="text">
+        <div *ngIf="registrationform.controls['confirm_password'].dirty || registrationform.controls['confirm_password'].touched">
+
+            <div class="alert alert-danger" *ngIf="registrationform.controls['confirm_password'].errors?.['required']">
+                Confirm Password is required</div>
+                <div class="alert alert-danger" *ngIf="registrationform.controls['confirm_password'].errors?.['maxlength']">
+                    Max length should be 10</div>
+                
+
+        </div>
+       
+    </div>
+    <div>
+        <button class="btn btn-primary">Register</button>
+    </div>
+
+</form>
