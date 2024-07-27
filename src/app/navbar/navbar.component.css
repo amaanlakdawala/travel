@@ -1,0 +1,111 @@
+/* navbar.component.css */
+ /* body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+   
+    color: white;
+  }
+  
+  .navbar-logo img {
+    height: 50px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navbar-menu a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-login button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar-login button:hover {
+    background-color: #0056b3;
+  } 
+
+  
+  .navbar {
+    padding: 1rem 2rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; 
+}
+ */
+ /* .navbar {
+  padding: 1rem 2rem;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important; /* Change to the desired hover color 
+}
+
+.navbar-brand img {
+  height: 40px; 
+} */
+
+.navbar {
+  padding: 0rem 2rem;
+  background-color: #222;
+ 
+}
+
+.navbar-brand img {
+  height: 100px; /* Adjust the size as needed */
+}
+.nav-item{
+ padding-left: 30px;
+
+}
+
+.nav-link {
+  color: white !important;
+  margin: 0 15px; /* Adjust the spacing as needed */
+}
+
+.nav-link:hover {
+  color: #ffc107 !important; /* Change to the desired hover color */
+}
+
+.btn-warning {
+  margin-left: auto;
+}

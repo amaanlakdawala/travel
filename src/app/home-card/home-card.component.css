@@ -1,0 +1,100 @@
+.deals_heading{
+    margin-top: 20px;
+    
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #003a70;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.deals_heading {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.home_cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-rating {
+    font-size: 1em;
+    color: #ff9800;
+    margin-bottom: 5px;
+}
+
+.card-reviews {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-reviews span {
+    color: #333;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.card-price {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}

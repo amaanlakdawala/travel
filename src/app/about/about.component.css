@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.adjust{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us-container {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-us-image {
+    width: 50%;
+    height: auto;
+}
+
+.about-us-content {
+    padding: 20px;
+    width: 50%;
+}
+
+.about-us-content h1 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+.about-us-content p {
+    line-height: 1.6;
+    color: #666;
+}

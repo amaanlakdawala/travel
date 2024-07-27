@@ -10,6 +10,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeCardComponent } from './home-card/home-card.component';
+import { WorksComponent } from './works/works.component';
+import { HomebannerComponent } from './homebanner/homebanner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,14 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    AboutComponent,
+    ContactComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomeCardComponent,
+    WorksComponent,
+    HomebannerComponent
   ],
   imports: [
     BrowserModule,
