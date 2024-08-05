@@ -1,0 +1,14 @@
+
+<app-navbar></app-navbar>
+<h1 class="deals_heading" style="text-align: center;">Enter Your Query Here</h1>
+<div class="complaint-container">
+    <img src="../../assets/images/about_us_image.jpg" alt="About Us Image" class="complaint-image">
+    <div class="complaint-form">
+      <label for="complaint">Enter Your Complaint</label>
+      <textarea name="complaint" id="complaint" [(ngModel)]="complaint"></textarea>
+      <button (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+  

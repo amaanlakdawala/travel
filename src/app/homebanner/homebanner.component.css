@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../assets/images/hero_image.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.content {
+    color: white;
+    max-width: 40%;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+}
+
+.content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.content .highlight {
+    font-weight: bold;
+}
+
+.content .arrow {
+    font-size: 36px;
+}
+
+.phone {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    height: 500px; /* Set fixed height */
+    padding: 10px 20px; /* Adjusted padding */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.phone-header {
+    background: #003a70;
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+.phone-header h2 {
+    margin: 0;
+    font-size: 16px; /* Adjusted font size */
+}
+
+.phone-content {
+    margin-top: 10px; /* Adjusted margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px); /* Adjusted height to fit within the phone */
+}
+
+.deal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjusted margin */
+}
+
+.deal img {
+    width: 60px; /* Adjusted size */
+    height: 60px; /* Adjusted size */
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.deal p {
+    margin: 0;
+    font-size: 12px; /* Adjusted font size */
+}

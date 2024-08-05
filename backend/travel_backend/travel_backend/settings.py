@@ -40,11 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'travel',
+
     'corsheaders',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+
+]
+
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,8 +58,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS=True
+
 
 ROOT_URLCONF = 'travel_backend.urls'
 
@@ -135,6 +142,11 @@ USE_TZ = True
 
 
 
+STATIC_URL = 'static/'
+
+
+
+
 
 
 
@@ -145,6 +157,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # Media files
 MEDIA_URL= '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+MEDIA_URL= '/images/'
+MEDIA_ROOT=BASE_DIR/'static/images'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

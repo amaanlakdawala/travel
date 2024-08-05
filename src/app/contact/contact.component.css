@@ -1,0 +1,205 @@
+/* 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+.complaint-container {
+    display: flex;
+    width: 100%;
+    
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .complaint-image {
+    width: 40%;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .complaint-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .complaint-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .complaint-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .complaint-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .complaint-form button:hover {
+    background-color: #0056b3;
+  }
+   */
+
+
+   /* complaint.component.css */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.complaint-container {
+    display: flex;
+    width: 100%;
+    
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.complaint-image {
+    width: 55%; 
+    max-width: 400px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.complaint-form {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 400px - 40px); 
+}
+
+.complaint-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.complaint-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.complaint-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.complaint-form button:hover {
+    background-color: #0056b3;
+} */
+
+
+/* complaint.component.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.deals_heading{
+    margin-top: 20px;
+    
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #003a70;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.complaint-container {
+    display: flex;
+    width: 100%;
+ 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+.complaint-image {
+    width: 50%; /* Adjust this value to change the image width */
+    max-width: 600px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.complaint-form {
+    width: 50%; /* Adjust this value to change the form width */
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 600px - 40px); /* Ensure form width minus image width and margin */
+}
+
+.complaint-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.complaint-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.complaint-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.complaint-form button:hover {
+    background-color: #0056b3;
+}
