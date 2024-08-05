@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 # from rest_framework.serializers import ModelSerializer
 # from travel.models import Hotel
+=======
+<<<<<<< HEAD
+from rest_framework import serializers
+from travel.models import Hotel
+
+# class HotelSerializer(ModelSerializer):
+#     class Meta:
+#         model=Hotel
+#         fields='__all__'
+
+class HotelSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Hotel
+        fields = '__all__'
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(obj.image.url)
+        return obj.image.url
+=======
+from rest_framework.serializers import ModelSerializer
+from travel.models import Hotel
+>>>>>>> 7602c1bb50205c373a7a781dfab5e51fd9bbca3e
 
 # class HotelSerializer(ModelSerializer):
 #     class Meta:
@@ -17,6 +44,7 @@ User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
+<<<<<<< HEAD
         model = User
         fields = ['username', 'email', 'password']
         extra_kwargs = {'password': {'write_only': True}}  # Ensure password is write-only
@@ -61,3 +89,8 @@ class BookingSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = Profile
 #         fields = '__all__'
+=======
+        model=Hotel
+        fields='__all__'
+>>>>>>> c21df584fd3dd39e80bd6d85b239c894d6a23be5
+>>>>>>> 7602c1bb50205c373a7a781dfab5e51fd9bbca3e
