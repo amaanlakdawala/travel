@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<!-- 
+<div class="container">
+    <div class="header">
+        <h1>Search Hotels</h1>
+    </div>
+    <div class="search-bar">
+        <form method="GET" action="/search" (ngSubmit)="filterHotels()">
+            <input type="text" name="query" [(ngModel)]="name" id="search-input" placeholder="Search for hotels...">
+            
+        
+
+     <div class="filters"> 
+       
+            <select [(ngModel)]="city" name="city" id="location-filter">
+                <option value="">Select Location</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Spain">Spain</option>
+                <option value="UAE">UAE</option>
+            </select>
+            <select [(ngModel)]="price_per_night" name="price_per_night" id="rating-filter">
+                <option value="">Select Price</option>
+                <option value="5">2000</option>
+                <option value="4.5">3000</option>
+                <option value="4">4000</option>
+            </select>
+            
+            <button type="submit">Apply Filters</button>
+        </form>
+    </div>
+    </div>
+    <div *ngIf="filteredHotels.length>0">
+        <div class="cards" id="hotel-cards" *ngFor="let hotel of filteredHotels">
+           
+            <div class="card">
+                <img [src]="hotel.image" alt="Hotel Image">
+                <h2>{{ hotel.name }}</h2>
+                <p>{{ hotel.city }}</p>
+                <p>{{ hotel.description }}</p>
+                <span>{{ hotel.price_per_night }}</span>
+                <button>Book Now</button>
+            </div>
+    </div>
+    </div>
+
+    <div *ngIf="filteredHotels.length==0">
+        <h2>No Hotels Found</h2>
+    </div>
+    -->
+
+    <div class="container">
+        <div class="header">
+            <h1>Search Hotels</h1>
+        </div>
+        <div class="search-bar">
+            <form method="GET" action="/search" (ngSubmit)="filterHotels()">
+                <input type="text" name="query" [(ngModel)]="name" id="search-input" placeholder="Search for hotels...">
+    
+                <select [(ngModel)]="city" name="city" id="location-filter">
+                    <option value="">Select Location</option>
+                    <option value="New York">New York</option>
+                    <option value="Miami">Miami</option>
+                    <option value="Aspen">Aspen</option>
+                </select>
+                <select [(ngModel)]="price_per_night" name="price_per_night" id="rating-filter">
+                    <option value="0">Select Price</option>
+                    <option value="2000">2000</option>
+                    <option value="2200">2200</option>
+                    <option value="4000">4000</option>
+                </select>
+                
+                <button type="submit">Apply Filters</button>
+            </form>
+        </div>
+    
+        <div *ngIf="filteredHotels.length > 0">
+            <div class="cards" id="hotel-cards">
+                <div class="card" *ngFor="let hotel of filteredHotels">
+                    <img [src]="hotel.image" alt="Hotel Image" class="card-image">
+                    <h2>{{ hotel.name }}</h2>
+                    <p>{{ hotel.city }}</p>
+                    <p>{{ hotel.description }}</p>
+                    <span class="price">{{ hotel.price_per_night }}</span>
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+    
+        <div *ngIf="filteredHotels.length == 0">
+            <h2 style="text-align: center;">No Hotels Found</h2>
+        </div>
+    </div>
+    
+   
+
+<app-footer></app-footer>

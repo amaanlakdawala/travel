@@ -60,18 +60,18 @@
               <a class="nav-link" routerLink="/">Home</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Travel</a>
+              <a class="nav-link" [routerLink]='["/search"]'>Travel</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" routerLink="/contact">Contact</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" routerLink="/about">About</a>
+              <a class="nav-link" [routerLink]='["/about"]'>About</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link" [routerLink]='["/profile"]'>Profile</a>
           </li>
       </ul>
-      <button class="btn btn-warning ml-3" type="button">Login</button>
+      <button class="btn btn-warning ml-3" type="button" [routerLink]='["/login"]'>Login</button>
   </div>
 </nav>

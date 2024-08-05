@@ -1,0 +1,204 @@
+<app-navbar></app-navbar>
+
+
+<!-- <div *ngIf="hotel && hotel.name">
+    <h1>{{ hotel.name }}</h1>
+    <img [src]="hotel.image" alt="{{ hotel.name }}">
+    <p>{{ hotel.address }}</p>
+    <p>{{ hotel.city }}</p>
+    <p>{{ hotel.description }}</p>
+    <p>Price per night: {{ hotel.price_per_night | currency }}</p>
+  </div>
+  
+  <div *ngIf="!hotel || !hotel.name">
+    <p>Loading hotel information...</p>
+  </div> -->
+  
+
+<div class="hotel-card">
+    <div class="hotel-header">
+
+        <h1>Name:{{ hotel.name }} <span class="stars">★★★★☆</span></h1>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> {{ hotel.city }} <a href="#">Show on Map</a>
+        <p class="description">{{ hotel.description }}</p>
+    </div>
+    <div class="hotel-images">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 1">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 2">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 3">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 4">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 5">
+        <img src="../../assets/images/hotels1.jpg" alt="Hotel Image 6">
+    </div>
+    <button [routerLink]="['/bookingform',hotel.id]" class="select-rooms">Book Hotel</button>
+    <div class="hotel-info">
+        <div class="rating">
+            <span class="rating-score">4/5</span>
+            <span class="rating-description">Very Good</span>
+            <span class="rating-location">Great Location</span>
+            <p class="rating-detail">Good location on Dubai Creek at the end of Sabkha, near Union</p>
+        </div>
+        <div class="amenities">
+            <h3>Amenities</h3>
+            <ul>
+                <li>Sunbathing Area</li>
+                <li>Sauna</li>
+                <li>Spa</li>
+                <li>Fitness Room</li>
+                <li>Private Parking</li>
+                <li>Restaurant</li>
+                <li>Meeting</li>
+                
+            </ul>
+        </div>
+        <div class="surroundings">
+            <h3>Surroundings</h3>
+            <ul>
+                <li>Metro: Union (1.3 km)</li>
+                <li>Metro: Gold Souq (1.8 km)</li>
+                <li>Airport: Dubai International Airport (6 km) <a href="#">Map</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h2>Guest Reviews <span>(222)</span></h2>
+        <div class="review-rating">
+            <div class="rating-score">4/5</div>
+            <div class="rating-text">Very Good</div>
+            <div class="rating-source">Trip.com Verified Reviews</div>
+        </div>
+    </div>
+    <div class="review-breakdown">
+        <div class="rating-item">
+            <span>Cleanliness</span>
+            <div class="rating-bar"><div class="rating-fill" style="width: 80%;"></div></div>
+            <span class="rating-value">4</span>
+        </div>
+        <div class="rating-item">
+            <span>Location</span>
+            <div class="rating-bar"><div class="rating-fill" style="width: 86%;"></div></div>
+            <span class="rating-value">4.3</span>
+        </div>
+        <div class="rating-item">
+            <span>Amenities</span>
+            <div class="rating-bar"><div class="rating-fill" style="width: 78%;"></div></div>
+            <span class="rating-value">3.9</span>
+        </div>
+        <div class="rating-item">
+            <span>Service</span>
+            <div class="rating-bar"><div class="rating-fill" style="width: 78%;"></div></div>
+            <span class="rating-value">3.9</span>
+        </div>
+    </div>
+    <div class="review-summary">
+        <span>Average for similar properties in Dubai</span>
+    </div>
+    <div class="review-filters">
+        <button>All reviews (222)</button>
+        <button>Positive reviews (202)</button>
+        <button>Reviews with photos/video (42)</button>
+        <button>Awesome stay (29)</button>
+        <button>Great location (24)</button>
+        <button>Friendly owner (17)</button>
+        <button>Convenient location (12)</button>
+        <button>Classy environment (7)</button>
+        <button>Great value for money (6)</button>
+        <button>Negative reviews (20)</button>
+    </div>
+    <div class="review-comments">
+        <div class="review-comment">
+            <div class="comment-author">
+                <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profile Picture">
+                <div class="author-info">
+                    <span class="author-name">MAHESH NARAINDAS</span>
+                    <span class="comment-date">July 27, 2024</span>
+                </div>
+            </div>
+            <div class="comment-text">Everything was ok but could have been improved</div>
+        </div>
+        <div class="review-comment">
+            <div class="comment-author">
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profile Picture">
+                <div class="author-info">
+                    <span class="author-name">Robin he</span>
+                    <span class="comment-date">July 22, 2024</span>
+                </div>
+            </div>
+            <div class="comment-text">房間非常不錯</div>
+            <div class="translate"><a href="#">Translate</a></div>
+        </div>
+        <div class="review-comment">
+            <div class="comment-author">
+                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profile Picture">
+                <div class="author-info">
+                    <span class="author-name">Guest User</span>
+                    <span class="comment-date">July 21, 2024</span>
+                </div>
+            </div>
+            <div class="comment-text">裝修比較陳舊，設施一般，其他都還好，附近有中國餐廳，對面是杜拜河</div>
+            <div class="translate"><a href="#">Translate</a></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="policies-card">
+    <h2>Property Policies</h2>
+    <div class="policy-section">
+        <div class="policy-title">Check-in and Check-out Times</div>
+        <div class="policy-content">
+            <p>Check-in: <strong>14:00–24:00</strong></p>
+            <p>Check-out: <strong>Before 12:00</strong></p>
+            <p>Front desk hours: 24/7</p>
+        </div>
+    </div>
+    <div class="policy-section">
+        <div class="policy-title">Child Policies</div>
+        <div class="policy-content">
+            <p>Children of all ages are welcome at this property.</p>
+        </div>
+    </div>
+    <div class="policy-section">
+        <div class="policy-title">Cots and Extra Beds</div>
+        <div class="policy-content">
+            <p>Extra bed and crib policies may vary according to room type. Please refer to the room type details for more information.</p>
+        </div>
+    </div>
+    <div class="policy-section">
+        <div class="policy-title">Breakfast</div>
+        <div class="policy-content">
+            <p>Breakfast is available at the hotel. Please contact the hotel for details.</p>
+            <table>
+                <tr>
+                    <th>Age</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>Adult</td>
+                    <td>Contact hotel</td>
+                </tr>
+            </table>
+            <p>Additional breakfast fees are not included in the total and need to be paid at the property.</p>
+        </div>
+    </div>
+    <div class="policy-section">
+        <div class="policy-title">Pets</div>
+        <div class="policy-content">
+            <p>Pets are not allowed.</p>
+        </div>
+    </div>
+    <div class="policy-section">
+        <div class="policy-title">Age Requirements</div>
+        <div class="policy-content">
+            <p>The main guest checking in must be at least 18 years old.</p>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

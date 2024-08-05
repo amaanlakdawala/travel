@@ -17,6 +17,14 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeCardComponent } from './home-card/home-card.component';
 import { WorksComponent } from './works/works.component';
 import { HomebannerComponent } from './homebanner/homebanner.component';
+import { HttpClient, HttpClientModule,provideHttpClient } from '@angular/common/http';
+import { withFetch } from '@angular/common/http';
+import { HoteldescriptionComponent } from './hoteldescription/hoteldescription.component';
+import { TestComponent } from './test/test.component';
+import { BookingComponent } from './booking/booking.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +39,27 @@ import { HomebannerComponent } from './homebanner/homebanner.component';
     FooterComponent,
     HomeCardComponent,
     WorksComponent,
-    HomebannerComponent
+    HomebannerComponent,
+    HoteldescriptionComponent,
+    TestComponent,
+    BookingComponent,
+    ProfileComponent,
+    SearchComponent,
+    UpdateProfileComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

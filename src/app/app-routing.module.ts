@@ -9,6 +9,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { HoteldescriptionComponent } from './hoteldescription/hoteldescription.component';
+import { TestComponent } from './test/test.component';
+import { BookingComponent } from './booking/booking.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +22,24 @@ const routes: Routes = [
     component:HomeComponent,
     title:'Home',
     // canActivate:[AuthGuard]
+  },
+  {
+    path:'profile',
+    component:ProfileComponent,
+    title:'Profile',
+
+  },
+  {
+    path:'updateprofile',
+    component:UpdateProfileComponent,
+    title:'Update Profile',
+
+  },
+  {
+    path:'search',
+    component:SearchComponent,
+    title:'Search',
+
   },
   {
     path:"login",
@@ -27,7 +51,7 @@ const routes: Routes = [
     path:"register",
     component:RegisterComponent,
     title:'Register',
-    canActivate:[AuthGuard]
+    
   },
   {
     path:"about",
@@ -45,6 +69,28 @@ const routes: Routes = [
     title:"Navbar",
     
   },
+  { path: 'hotel_description/:id',
+     component: HoteldescriptionComponent,
+      title: 'Hotel Description' },
+      {
+        path:'bookingform/:id',
+        component:BookingComponent,
+        title:'Booking Form'
+
+      },
+
+
+
+
+      {
+        path:'test/:id',
+        component:TestComponent
+      },
+
+
+
+
+      
   {
     path:"footer",
     component:FooterComponent,

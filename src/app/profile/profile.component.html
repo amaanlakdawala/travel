@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div class="overall">
+    <div class="profile-container">
+        <div class="cover-photo">
+          <button class="upload-cover-photo" [routerLink]="['/updateprofile']">Upload Cover Photo</button>
+        </div>
+        <div class="profile-info">
+          <div class="profile-photo">
+            <img src="https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profile Photo"> <!-- Placeholder for Profile Photo -->
+          </div>
+          <div class="profile-details">
+            <h1>Mohammad Zafar {{message}}</h1>
+            <p>Al Madinah Al Munawwarah, KSA</p>
+            <div class="points">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                  </svg>
+                <!-- Placeholder for Points Icon -->
+              <p style="margin-left: 10px;">2840 PTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="nav-tabs">
+          <div>Timeline</div>
+          <div>Booking History (2)</div>
+          <div>New Bookings (1)</div>
+          <div>My Favourites (7)</div>
+          <div>Account Settings</div>
+        </div>
+      </div>
+     
+</div>
+
+
+
+
+<div class="container">
+    <div class="header">
+        <h1>My Favourites (7)</h1>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Image">
+            <h2>Altis Resort Hotel & Spa</h2>
+            <p>5.0 Ratings</p>
+            <p>Balek, Turkey</p>
+            <span>50% OFF</span>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1458457/pexels-photo-1458457.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Image">
+            <h2>Alanda Marbella Hotel</h2>
+            <p>4.8 Ratings</p>
+            <p>Marbella, Spain</p>
+            <span>20% OFF</span>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel Image">
+            <h2>Jumeirah Zabeel Saray</h2>
+            <p>4.9 Ratings</p>
+            <p>Palm Jumeirah, UAE</p>
+            <span>10% OFF</span>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/297985/pexels-photo-297985.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Hotel Image">
+            <h2>Alanda Marbella Hotel</h2>
+            <p>4.8 Ratings</p>
+            <p>Marbella, Spain</p>
+            <span>20% OFF</span>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</div>
+
+<app-footer></app-footer>

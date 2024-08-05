@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.hotel-card {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-header h1 {
+    font-size: 24px;
+    margin: 0;
+    display: inline-block;
+    color: #333;
+}
+
+.stars {
+    font-size: 20px;
+    color: gold;
+    margin-left: 10px;
+}
+
+.location, .description {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.location a, .description a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.location a:hover, .description a:hover {
+    text-decoration: underline;
+}
+
+.hotel-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.hotel-images img {
+    width: calc(33.3333% - 10px);
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.hotel-images img:hover {
+    transform: scale(1.05);
+}
+
+.select-rooms {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+.select-rooms:hover {
+    background-color: #0056b3;
+}
+
+.hotel-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.rating, .amenities, .surroundings {
+    width: 30%;
+}
+
+.rating-score {
+    font-size: 24px;
+    color: #007BFF;
+    font-weight: bold;
+    display: block;
+}
+
+.rating-description {
+    font-size: 18px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.rating-location {
+    font-size: 14px;
+    color: #28a745;
+    display: block;
+    margin-top: 5px;
+}
+
+.rating-detail {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.amenities h3, .surroundings h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.amenities ul, .surroundings ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amenities ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amenities li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    width: 50%; /* Two columns */
+}
+
+.surroundings li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.amenities a, .surroundings a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.amenities a:hover, .surroundings a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.review-card {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.review-header h2 span {
+    font-size: 18px;
+    color: #666;
+}
+
+.review-rating {
+    text-align: right;
+}
+
+.rating-score {
+    font-size: 24px;
+    color: #007BFF;
+    font-weight: bold;
+    display: block;
+}
+
+.rating-text {
+    font-size: 18px;
+    color: #666;
+    display: block;
+}
+
+.rating-source {
+    font-size: 14px;
+    color: #007BFF;
+    display: block;
+}
+
+.review-breakdown {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.rating-item {
+    width: 23%;
+}
+
+.rating-item span {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rating-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 10px;
+    background-color: #007BFF;
+    border-radius: 5px 0 0 5px;
+}
+
+.rating-value {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+}
+
+.review-summary {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.review-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.review-filters button {
+    font-size: 14px;
+    color: #007BFF;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.review-filters button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.review-comments {
+    margin-top: 20px;
+}
+
+.review-comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.comment-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #666;
+    flex: 1;
+}
+
+.translate {
+    font-size: 12px;
+    color: #007BFF;
+    margin-top: 5px;
+}
+
+.translate a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.translate a:hover {
+    text-decoration: underline;
+}
+
+
+
+.policies-card {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.policies-card h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.policy-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.policy-title {
+    width: 30%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.policy-content {
+    width: 65%;
+    font-size: 14px;
+    color: #666;
+}
+
+.policy-content p {
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #fafafa;
+}

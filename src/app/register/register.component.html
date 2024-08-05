@@ -15,6 +15,21 @@
         
     </div>
 
+
+    <div>
+        <label class="form-label">Email</label>
+        <input formControlName="email" class="form-control" type="text">
+        <div *ngIf="registrationform.controls['email'].dirty || registrationform.controls['email'].touched">
+
+            <div class="alert alert-danger" *ngIf="registrationform.controls['email'].errors?.['required']">
+                Email is required</div>
+
+
+
+        </div>
+        
+    </div>
+
     <div>
         <label class="form-label">Password</label>
         <input formControlName="password" class="form-control" type="text">
@@ -33,7 +48,9 @@
         <label class="form-label">Confirm Password</label>
         <input formControlName="confirm_password" class="form-control" type="text">
         <div *ngIf="registrationform.controls['confirm_password'].dirty || registrationform.controls['confirm_password'].touched">
-
+           <div class="alert alert-danger" *ngIf="registrationform.controls['confirm_password'].value!=registrationform.controls['password'].value">
+          password must be same
+           </div>
             <div class="alert alert-danger" *ngIf="registrationform.controls['confirm_password'].errors?.['required']">
                 Confirm Password is required</div>
                 <div class="alert alert-danger" *ngIf="registrationform.controls['confirm_password'].errors?.['maxlength']">
@@ -43,8 +60,13 @@
         </div>
        
     </div>
-    <div>
-        <button class="btn btn-primary">Register</button>
-    </div>
+    
+    <button [disabled]="!registrationform.valid || registrationform.controls['confirm_password'].value !== registrationform.controls['password'].value" class="btn btn-primary">Register</button>
+
+
+        <!-- <button [disabled]= "!registrationform.valid"  class="btn btn-primary">Register</button> -->
+        
+      
+   
 
 </form>

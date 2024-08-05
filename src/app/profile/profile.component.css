@@ -1,0 +1,187 @@
+/* .overall{
+    font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    } */
+    .profile-container {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .cover-photo {
+      width: 100%;
+      height: 200px;
+      background-image: url('https://images.pexels.com/photos/24613552/pexels-photo-24613552/free-photo-of-person-walking-on-sand-dunes-on-desert.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Placeholder for Cover Photo */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .cover-photo .upload-cover-photo {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cover-photo .upload-cover-photo:hover {
+      background-color: darkorange;
+    }
+    .profile-info {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid white;
+      margin-right: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-details {
+      flex: 1;
+    }
+    .profile-details h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+    .profile-details p {
+      margin: 5px 0;
+      color: #777;
+      font-weight: 500;
+    }
+    .profile-details .points {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .profile-details .points img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .profile-details .points span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f8f8f8;
+      border-top: 1px solid #ddd;
+    }
+    .nav-tabs div {
+      padding: 15px 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: #555;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .nav-tabs div:hover {
+      background-color: #eee;
+      color: #333;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .header {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .header h1 {
+        font-size: 2.5em;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        width: calc(100% / 3 - 40px);
+        box-sizing: border-box;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeInUp 1s ease-in-out;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .card h2 {
+        font-size: 1.5em;
+        color: #444;
+        margin-bottom: 10px;
+    }
+    .card p {
+        font-size: 1em;
+        color: #777;
+        margin: 5px 0;
+    }
+    .card span {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        color: #fff;
+        background-color: #ff6b6b;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }

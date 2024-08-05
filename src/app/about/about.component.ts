@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  ngOnInit():void{
+    console.log('About Component Loaded');
+    
+  }
+
 }

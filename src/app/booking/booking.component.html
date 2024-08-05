@@ -1,0 +1,79 @@
+<form [formGroup]="bookingForm" (ngSubmit)="booked()">
+    <div>
+        <label class="form-label" for="" >Hotel Name: </label>
+        <input class="form-control" type="text" formControlName="hotel">
+        <div *ngIf="bookingForm.controls['hotel'].touched || bookingForm.controls['hotel'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['hotel'].errors?.['required']">
+                Hotel Name Required
+            </div>
+
+        </div>
+    </div>
+
+
+    <div>
+        <label class="form-label" for="" >Start Date</label>
+        <input class="form-control" type="date" formControlName="start_date">
+        <div *ngIf="bookingForm.controls['start_date'].touched || bookingForm.controls['start_date'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['start_date'].errors?.['required']">
+                Start Date Required
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <div>
+        <label class="form-label" for="" >End Date</label>
+        <input class="form-control" type="date" formControlName="end_date">
+        <div *ngIf="bookingForm.controls['end_date'].touched || bookingForm.controls['end_date'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['end_date'].errors?.['required']">
+                End Date Required
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label" for="" >Guest Name</label>
+        <input class="form-control" type="text" formControlName="guest_name">
+        <div *ngIf="bookingForm.controls['guest_name'].touched || bookingForm.controls['guest_name'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['guest_name'].errors?.['required']">
+                Guest Name Required
+            </div>
+
+        </div>
+    </div>
+
+
+    <div>
+        <label class="form-label" for="" >Email</label>
+        <input class="form-control" type="email" formControlName="guest_email">
+        <div *ngIf="bookingForm.controls['guest_email'].touched || bookingForm.controls['guest_email'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['guest_email'].errors?.['required']">
+                Email Required
+            </div>
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['guest_email'].errors?.['email']">
+                Enter Valid Email 
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label" for="" >Guest Number</label>
+        <input class="form-control" type="text" formControlName="guest_phone">
+        <div *ngIf="bookingForm.controls['guest_phone'].touched || bookingForm.controls['guest_phone'].dirty">
+            <div class="alert alert-danger" *ngIf="bookingForm.controls['guest_phone'].errors?.['required'] ">
+                Guest Number Required</div>
+                <div class="alert alert-danger" *ngIf="bookingForm.controls['guest_phone'].errors?.['maxlength']">
+                    Enter Valid Guest Number</div>
+
+        </div>
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+    
+
+</form>

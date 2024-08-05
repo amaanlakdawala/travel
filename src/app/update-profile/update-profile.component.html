@@ -1,0 +1,31 @@
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label class="form-label">Username</label>
+        <input type="text" formControlName="username" class="form-control">
+    </div>
+
+    <div>
+        <label class="form-label">BIO</label>
+        <input type="text" formControlName="bio" class="form-control">
+    </div>
+
+    <div>
+        <label class="form-label">Location</label>
+        <input type="text" formControlName="location" class="form-control">
+    </div>
+
+    <div>
+        <label class="form-label">Profile Image</label>
+        <input type="file" formControlName="profile_image" class="form-control">
+    </div>
+
+    <div>
+        <label class="form-label">Cover Image</label>
+        <input type="file" formControlName="cover_image" class="form-control">
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+
+</form>

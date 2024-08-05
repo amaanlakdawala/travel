@@ -13,19 +13,19 @@
 </div> -->
 
 <div class="home_cards">
-  <div class="card">
+  <div [routerLink]='["/hotel_description",hotel.id]' class="card" *ngFor="let hotel of hotels;let i = index">
       <div class="card-img-wrapper">
-          <img src="../../assets/images/hotels1.jpg" class="card-img" alt="Best Western Plus Pearl Creek">
+          <img [src]="hotel.image" class="card-img" alt="Best Western Plus Pearl Creek">
       </div>
       <div class="card-body">
-          <h5 class="card-title">Best Western Plus Pearl Creek</h5>
+          <h5 class="card-title">{{ hotel.name }}</h5>
           <p class="card-rating">★★★★☆</p>
           <p class="card-reviews">4.1/5 <span>222 reviews</span></p>
           <p class="card-text">Free Cancellation</p>
-          <p class="card-price">From INR 4,223</p>
+          <p class="card-price">From INR {{ hotel.price_per_night }}</p>
       </div>
   </div>
-  <div class="card">
+  <!-- <div class="card">
       <div class="card-img-wrapper">
           <img src="../../assets/images/hotels2.jpg" class="card-img" alt="Golden Sands Hotel Apartments">
       </div>
@@ -48,7 +48,7 @@
           <p class="card-text">Free Cancellation</p>
           <p class="card-price">From INR 2,902</p>
       </div>
-  </div>
+  </div> -->
 </div>
 
 

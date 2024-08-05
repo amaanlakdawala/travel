@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_g(kjt5^enhdz2wm$=$p%*95#w^_@q(83_#n@62y-3t6e9_gs#
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# AUTH_USER_MODEL='travel.User'
 
 # Application definition
 
@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'travel',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -137,9 +139,27 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
 MEDIA_URL= '/images/'
-MEDIA_ROOT=BASE_DIR/'static/images'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'Authorization',
+    'X-Requested-With',
+    'Access-Control-Allow-Origin',
+    'Access-Control-Allow-Headers',
+    'Access-Control-Allow-Credentials',
+]
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL = 'travel.User'
